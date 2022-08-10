@@ -1,0 +1,59 @@
+{{ define "layout" }}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Mandiri</title>
+    <link rel="stylesheet" href="static/stylesheet.css">
+    <link rel="stylesheet" href="static/responsive.css">
+    <!-- <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> -->
+</head>
+
+<body>
+
+    <!-- Head -->
+    <div class="header">
+        <div class="header-logo">Y.A.M</div>
+        <div class="header-list">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/task">Task</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="content-wrapper">
+        <div class="container">
+            {{ template "main" .}}
+        </div>
+    </div>
+    <!-- Foot -->
+    <!-- <div class="message-wrapper">
+        <div class="container">
+            <div class="heading">
+                <h2></h2>
+                <h3></h3>
+            </div>
+            <span class="btn message"></span>
+        </div>
+    </div> -->
+    <footer>
+        <div class="container">
+            <div class="footer-menu">
+                <h3>Contact Us</h3>
+                <p class="alamat-kantor">Grand Conference Hall - 881 7th Ave New York, NY,<br>
+                    + 1805 73 78 00<br>
+                    info@team04.com</p>
+            </div>
+            <div class="footer-sub">
+                <p>© 2022 by Team A04. All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+    <!-- End Foot -->
+</body>
+
+</html>
+{{ end }}

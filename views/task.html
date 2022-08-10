@@ -1,0 +1,31 @@
+{{ template "layout" .}}
+{{ define "main" }}
+<a href="/form" class="btn tambah">Tambah</a>
+<div class="content-wrapper">
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Kegiatan</th>
+            <th>Tanggal</th>
+            <th>Status</th>
+            <th>Aksi</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{ range . }}
+        <tr>
+            <td>{{ .ID }}</td>
+            <td>{{ .Kegiatan }}</td>
+            <td>{{ .Tanggal }}</td>
+            <td>{{ .TaskStatus }}</td>
+            <td>
+                <a href="/hapus?id={{.ID}}" class="btn hapus">Delete</a>
+                <a href="/ubah?id={{.ID}}" class="btn ubah">Edit</a>
+            </td>
+        </tr>
+        {{ end }}
+    </tbody>
+</table>
+</div>
+{{ end }}

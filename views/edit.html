@@ -1,0 +1,27 @@
+{{ template "layout" .}}
+{{ define "main" }}
+<div class="content-wrapper form-container">
+    <form action="/proses_ubah" method="POST">
+      <!-- <label for="id">ID</label> -->
+      <input type="hidden" id="id" name="id" value="{{ .ID }}">
+  
+      <label for="kegiatan">Kegiatan</label>
+      <textarea id="kegiatan" name="kegiatan">{{ .Kegiatan }}</textarea>
+
+      <label for="tgl">Tanggal</label>
+      <input type="date" id="tgl" name="tanggal" value="{{ .Tanggal }}">
+  
+      <label for="status">Status</label>
+      <select id="status" name="status">
+        <option value="">--Pilih--</option>
+        <option id="0" value="0">Belum Selesai</option>
+        <option id="1" value="1">Selesai</option>
+      </select>
+    
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+  <script>
+    document.getElementById("{{ .Status }}").selected = "true";
+  </script>
+{{ end }}
